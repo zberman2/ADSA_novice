@@ -1,0 +1,36 @@
+Dataset information
+
+The classification task is to classify whether a webpage will be considered
+relevant to many users after a long period of time. In other words, we would
+like to classify whether a webpage is "ephemeral" or "evergreen". Each of the
+features below describe the web page of interest. Overall, this classification
+task helps us understand what makes a webpage "popular".
+
+FieldName	Type	Description
+label	integer (0 or 1)	User-determined label. Either evergreen (1) or non-evergreen (0); available for the training set only
+news_front_page	integer (0 or 1)	True (1) if this webpage is deemed front page news
+numberOfLinks	integer	Number of <a>  markups
+frameTagRatio	double	Ratio of iframe markups over total number of markups
+parametrizedLinkRatio	double	A link is parametrized if it's url contains parameters  or has an attached onClick event
+non_markup_alphanum_characters	integer	Page's text's number of alphanumeric characters
+linkwordscore	double	Percentage of words on the page that are in hyperlink's text
+is_news	integer (0 or 1)	True (1) if this webpage is deemed as news
+avglinksize	double	Average number of words in each link
+boilerplate	json	Boilerplate text
+image_ratio	double	Ratio of <img> tags vs text in the page
+framebased	integer (0 or 1)	A page is frame-based (1) if it has no body markup but have a frameset markup
+embed_ratio	double	Count of number of <embed>  usage
+alchemy_category_score	double	Alchemy category score (per the publicly available Alchemy API found at www.alchemyapi.com)
+alchemy_category	string	Alchemy category (per the publicly available Alchemy API found at www.alchemyapi.com)
+lengthyLinkDomain	integer (0 or 1)	True (1) if at least 3 <a> 's text contains more than 30 alphanumeric characters
+numwords_in_url	double	Number of words in url
+html_ratio	double	Ratio of tags vs text in the page
+hasDomainLink	integer (0 or 1)	True (1) if it contains an <a>  with an url with domain
+spelling_errors_ratio	double	Ratio of words not found in wiki (considered to be a spelling mistake)
+compression_ratio	double	Compression achieved on this page via gzip (measure of redundancy)
+url	string	Url of the webpage to be classified
+urlid	unique identifier for each url
+commonlinkratio_1	double	# of links sharing at least 1 word with 1 other links / # of links
+commonlinkratio_2	double	# of links sharing at least 1 word with 2 other links / # of links
+commonlinkratio_3	double	# of links sharing at least 1 word with 3 other links / # of links
+commonlinkratio_4	double	# of links sharing at least 1 word with 4 other links / # of links
